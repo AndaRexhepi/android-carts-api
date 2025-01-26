@@ -18,7 +18,6 @@ import com.example.androidcartsapi.databinding.FragmentCartsBinding
 class CartsFragment : Fragment() {
 
     private lateinit var binding: FragmentCartsBinding
-    private lateinit var itemBinding: CartItemBinding
     private lateinit var viewModel: CartViewModel
     private lateinit var adapter: CartsAdapter
 
@@ -28,14 +27,13 @@ class CartsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCartsBinding.inflate(layoutInflater)
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val cartItem = itemBinding.cartCard
+
         // Initialize ViewModel
         viewModel = ViewModelProvider(this)[CartViewModel::class.java]
 
@@ -49,7 +47,7 @@ class CartsFragment : Fragment() {
         // Fetch carts
         viewModel.getCarts()
 
-        cartItem.setOnClickListener{
+        binding.cartsList.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.fragment_products)
         }
 
