@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/blankFragment">
+
+    <fragment
+        android:id="@+id/fragment_carts"
+        android:name="com.example.androidcartsapi.ui.carts.CartsFragment"
+        android:label="Carts"
+        tools:layout="@layout/fragment_carts" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.androidcartsapi.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.androidcartsapi.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.androidcartsapi.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_nav_home"
+            app:destination="@id/fragment_carts" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.androidcartsapi.fragments.WelcomingFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/welcoming_fragment" >
+        <action
+            android:id="@+id/action_blankFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_blankFragment_to_loginFragment2"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+</navigation>
