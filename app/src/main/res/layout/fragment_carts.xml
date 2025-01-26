@@ -6,16 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".ui.carts.CartsFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cartsList"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/pickCart"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:text="Pick a cart to view its products!"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/cart_item"
-        />
+        tools:listitem="@layout/cart_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

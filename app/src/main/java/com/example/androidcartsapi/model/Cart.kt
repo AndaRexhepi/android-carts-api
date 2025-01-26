@@ -9,6 +9,11 @@ data class ApiResponse(
     @SerializedName("limit") val limit: Int
 )
 
+data class CartProducts(
+    @SerializedName("id") val id: Int,
+    @SerializedName("products") val products: List<Product>,
+    @SerializedName("thumbnail") val thumbnail: String
+)
 data class Cart(
     @SerializedName("id") val id: Int,
     @SerializedName("products") val products: List<Product>,

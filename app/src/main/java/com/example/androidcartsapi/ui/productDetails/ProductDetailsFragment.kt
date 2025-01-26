@@ -1,4 +1,4 @@
-package com.example.androidcartsapi.ui.slideshow
+package com.example.androidcartsapi.ui.productDetails
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.androidcartsapi.databinding.FragmentSlideshowBinding
 
-class SlideshowFragment : Fragment() {
+class ProductDetailsFragment : Fragment() {
 
     private var _binding: FragmentSlideshowBinding? = null
 
@@ -22,14 +22,14 @@ class SlideshowFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val slideshowViewModel =
-            ViewModelProvider(this).get(SlideshowViewModel::class.java)
+        val productDetailsViewModel =
+            ViewModelProvider(this).get(ProductDetailsViewModel::class.java)
 
         _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
+        productDetailsViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

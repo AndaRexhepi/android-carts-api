@@ -1,10 +1,10 @@
-package com.example.androidcartsapi.ui.slideshow
+package com.example.androidcartsapi.ui.productDetails
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class ProductDetailsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is slideshow Fragment"

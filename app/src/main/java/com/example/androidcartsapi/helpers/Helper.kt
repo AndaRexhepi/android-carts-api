@@ -11,7 +11,7 @@ object Helper {
     fun provideRetrofit(): ServiceApi {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://dummyjson.com/carts/")
+            .baseUrl("https://dummyjson.com/")
             .build().create(ServiceApi::class.java)
     }
 
