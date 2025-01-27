@@ -10,7 +10,7 @@
             android:title="Carts" />
         <item
             android:id="@+id/fragment_products"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/deliverybox"
             android:title="Products" />
 
     </group>

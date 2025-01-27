@@ -6,16 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.carts.CartsFragment">
 
-    <TextView
-        android:id="@+id/pickCart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center_horizontal"
-        android:text="Pick a cart to view its products!"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cartsList"
