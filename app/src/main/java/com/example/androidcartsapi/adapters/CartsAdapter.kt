@@ -27,7 +27,11 @@ class CartsAdapter(var context: Context, var carts: List<Cart>) : RecyclerView.A
         return carts.size
     }
 
+
     override fun onBindViewHolder(holder: CartsViewHolder, position: Int) {
-        holder.bindCart(carts[position])
+        val cart = carts[position]
+        holder.bindCart(cart) // Bind the cart data
+
+
     }
 }

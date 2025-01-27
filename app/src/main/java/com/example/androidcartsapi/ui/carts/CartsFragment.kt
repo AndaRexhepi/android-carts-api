@@ -9,11 +9,13 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidcartsapi.R
 import com.example.androidcartsapi.adapters.CartsAdapter
 import com.example.androidcartsapi.databinding.CartItemBinding
 import com.example.androidcartsapi.databinding.FragmentCartsBinding
+import com.example.androidcartsapi.model.Cart
 
 class CartsFragment : Fragment() {
 
@@ -62,4 +64,14 @@ class CartsFragment : Fragment() {
         }
 
     }
+
+//    private fun setupRecyclerView(carts: List<Cart>) {
+//        adapter = CartsAdapter(requireContext(), carts) { cartId ->
+//            // Use the regenerated navigation action
+//
+//            val action = CartsFragmentDirections.actionFragmentCartsToFragmentProducts(cartId)
+//            binding.root.findNavController().navigate(action)
+//        }
+//        binding.cartsList.adapter = adapter
+//    }
 }

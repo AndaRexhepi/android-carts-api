@@ -9,37 +9,64 @@
         android:id="@+id/fragment_carts"
         android:name="com.example.androidcartsapi.ui.carts.CartsFragment"
         android:label="Carts"
-        tools:layout="@layout/fragment_carts" >
-        <action
-            android:id="@+id/action_fragment_carts_to_nav_gallery"
-            app:destination="@id/fragment_products" />
-    </fragment>
+        tools:layout="@layout/fragment_carts" />
 
     <fragment
         android:id="@+id/fragment_products"
         android:name="com.example.androidcartsapi.ui.products.ProductsFragment"
         android:label="Products"
-        tools:layout="@layout/fragment_products" />
+        tools:layout="@layout/fragment_products">
+        <action
+            android:id="@+id/action_fragment_products_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment">
+            <argument
+                android:name="id"
+                app:argType="integer"
+                android:defaultValue="0"
+                />
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.androidcartsapi.ui.productDetails.ProductDetailsFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        </action>
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Missing title" />
+        <argument
+            android:name="price"
+            app:argType="float"
+            android:defaultValue="0.0" />
+        <argument
+            android:name="discountedPercentage"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="quantity"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="thumbnail"
+            app:argType="string"
+            android:defaultValue="Missing photo" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.androidcartsapi.ui.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_nav_home"
             app:destination="@id/fragment_carts" />
     </fragment>
+
     <fragment
         android:id="@+id/blankFragment"
         android:name="com.example.androidcartsapi.fragments.WelcomingFragment"
         android:label="fragment_blank"
-        tools:layout="@layout/welcoming_fragment" >
+        tools:layout="@layout/welcoming_fragment">
         <action
             android:id="@+id/action_blankFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -49,4 +76,17 @@
             app:enterAnim="@anim/nav_default_pop_enter_anim"
             app:popUpTo="@id/loginFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.androidcartsapi.ui.products.ProductDetailsFragment"
+        android:label="Product Details"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+
 </navigation>

@@ -12,8 +12,14 @@ data class ApiResponse(
 data class CartProducts(
     @SerializedName("id") val id: Int,
     @SerializedName("products") val products: List<Product>,
+    @SerializedName("total") val total: Double,
+    @SerializedName("discountedTotal") val discountedTotal: Double,
+    @SerializedName("userId") val userId: Int,
+    @SerializedName("totalProducts") val totalProducts: Int,
+    @SerializedName("totalQuantity") val totalQuantity: Int,
     @SerializedName("thumbnail") val thumbnail: String
 )
+
 data class Cart(
     @SerializedName("id") val id: Int,
     @SerializedName("products") val products: List<Product>,

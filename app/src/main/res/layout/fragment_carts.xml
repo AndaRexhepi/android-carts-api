@@ -14,7 +14,6 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
         android:text="Pick a cart to view its products!"
-        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent" />
 

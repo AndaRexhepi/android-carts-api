@@ -10,21 +10,19 @@
         android:id="@+id/select_product"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="Click on a product to view its details!"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:textSize="20dp"
-        android:layout_marginTop="60dp"
-        />
-    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
         android:id="@+id/totalProducts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/select_product"
+        android:layout_marginTop="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="30dp"
-        tools:listitem="@layout/product_item"
-        />
+        app:layout_constraintTop_toBottomOf="@id/select_product" />
 </androidx.constraintlayout.widget.ConstraintLayout>
